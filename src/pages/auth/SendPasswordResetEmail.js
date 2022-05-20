@@ -1,3 +1,4 @@
+// eslint-disable-next-lin
 import { Grid, TextField, Button, Box, Alert, Typography } from "@mui/material";
 import { useState } from "react";
 import { useSendPasswordResetEmailMutation } from "../../services/userAuthApi";
@@ -5,6 +6,7 @@ import React from "react";
 const SendPasswordResetEmail = () => {
   const [server_error, setServerError] = useState({});
   const [server_msg, setServerMsg] = useState({});
+  // eslint-disable-next-lin
   const [
     sendPasswordResetEmail,
     { isLoading },

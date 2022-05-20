@@ -2,7 +2,8 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import LoginReg from "./pages/auth/LoginReg";
 import ResetPassword from "./pages/auth/ResetPassword";
 import SendPasswordResetEmail from "./pages/auth/SendPasswordResetEmail";
-import Contact from "./pages/Contact";
+import InvestorMain from "./pages/Investor";
+import SingleUser from "./pages/Single-User";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 import Layout from "./pages/Layout";
@@ -35,7 +36,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="contact" element={<Contact />} />
+            <Route path="investor-main" element={<InvestorMain />} />
+            <Route path="single-user" element={<SingleUser />} />
             {/* <Route path="login" element={!access_token ? <LoginReg /> : <Navigate to="/entrepreneur/welcome-page" />} /> */}
             <Route path="login" element={<LoginReg />} />
             <Route

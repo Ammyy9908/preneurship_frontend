@@ -1,3 +1,4 @@
+// eslint-disable-next-lin
 import "./../css/Buddy-Verification.css";
 import { Link } from "react-router-dom";
 import s from "./../images/success icon.png";

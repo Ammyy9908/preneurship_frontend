@@ -27,13 +27,23 @@ const Navbar = () => {
 
             <Button
               component={NavLink}
-              to="/contact"
+              to="/single-user"
               style={({ isActive }) => {
                 return { backgroundColor: isActive ? "#6d1b7b" : "" };
               }}
               sx={{ color: "white", textTransform: "none" }}
             >
-              Contact
+              Single User Login/Registration
+            </Button>
+            <Button
+              component={NavLink}
+              to="/investor-main"
+              style={({ isActive }) => {
+                return { backgroundColor: isActive ? "#6d1b7b" : "" };
+              }}
+              sx={{ color: "white", textTransform: "none" }}
+            >
+              Investor Login/Registration
             </Button>
 
             {access_token ? (
@@ -56,7 +66,7 @@ const Navbar = () => {
                 }}
                 sx={{ color: "white", textTransform: "none" }}
               >
-                Login/Registration
+               Entrepreneur Login/Registration
               </Button>
             )}
           </Toolbar>
