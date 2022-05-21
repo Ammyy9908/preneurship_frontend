@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const dataApi = createApi({
   reducerPath: "dataApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://127.0.0.1:8000/api/portfolio/",
+    baseUrl: "https://10doshi12.pythonanywhere.com/api/portfolio/",
   }),
   endpoints: (builder) => ({
     getDataById: builder.query({
