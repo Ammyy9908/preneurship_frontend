@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .root{align-items: center;
+    height: 100vh;
+  
+  }
+  .ClgbixBox{
+    position: absolute;
+    /* left: 10%; */
+    top: 5%;
+    margin-left: 10%;
+    width: 86rem;
+    height: 46rem;
+    z-index: 23;
+    background-color: #4525F2;
+    border-radius: 2em;
+    border: 1px solid rgb(13, 12, 12);
+  }
+  
+  .ClgquarterC{
+    width: 10rem;
+      height: 10rem;
+      border-top-right-radius:0;
+      border-top-left-radius:0;
+      border-bottom-right-radius:0;
+      border-bottom-right-radius:100%;
+   background-color: #5a41e5;
+   
+  }
+  .ClgsmallC2{
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
+    top: 5rem;
+    right: 10px;
+    background-color: #5a41e5;
+    border-radius: 50%;
+  
+  }
+  .ClgsmallC1{
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
+    top: 39rem;
+    left: 13%;
+    background-color: #5a41e5;
+    border-radius: 50%;
+  
+  }
+  .ClgStudentPoster{
+    position: relative;
+    left: 58%;
+    top: 3%;
+    height: 90%;
+    width: 40%;
+    background-image: url(../../../images/cuate.png);
+    background-size: 100% 100%;
+  }
+  .ClgSchoolStudentFrom{
+    position: absolute;
+    left: 3%;
+    top: 5%;
+    height: 42rem;
+    width: 35rem;
+    background: white;
+    border-radius: 2rem;
+  }
+  .ClgSchoolStudentFrom h3{
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .ClgbigC{
+    position: absolute;
+    right: 0px ;
+    bottom:0px;
+    height: 12rem;
+    width: 12rem;
+   background-color: #5a41e5;
+    border-radius: 50%;
+  }
+  .ClgStFrom
+  {
+    position: absolute;
+    top: 8rem;
+    left: 3rem;
+    display:flex;
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+  #ClgStBack{
+    font-size: 1.3rem;
+  color: blue;
+  text-decoration: none;
+  font-weight: bold;
+  padding-left: 10px;
+  }
+  #ClgStnext{
+    background: blue;
+    width: 23%; 
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 2rem;
+    color: white;
+  }
+  .ClgStFrom select{
+    border: 1px solid black;
+    width: 30rem;
+    height: 2.5rem;
+    border-radius: 1rem;
+  }
+  
+    /* mobile view css  */
+  
+  .ClgStMobHead{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 15%;
+  }
+  
+  .ClgMobForm{
+    margin-top: 12%;
+    margin-bottom: 6%;
+  }
+  .ClgMobForm select{ 
+    width: 80%;
+    padding: 10px;
+    border: 1px solid rgb(137, 135, 135);
+    background: white;
+    /* margin-left: 3rem; */
+    border-radius: 2rem;
+    margin-top: 4%;
+    margin-bottom: 4%;
+  }
+  #ClgStMobNext{
+    padding: 13px 23px;
+    color: white;
+    background: blue;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  .ClgStMobile{
+    text-align: center;
+  }
+  
+  
+  
+  
+  @media only screen and (max-width:1700px) and (min-width:550px){
+      html{
+        font-size: 70%;
+      }
+      /* .mobnext{
+        display: none;
+      } */
+      .ClgStMobile{
+        display: none;
+      }
+      
+    }
+  @media(max-width:1017px){
+    .ClgbixBox{
+      left: 0rem !important;
+      margin-left: 5%;
+    }
+  }
+  @media(max-width:962px){
+    .ClgbixBox{
+      left: 0rem !important;
+      margin-left: 2%;
+    }
+  }
+  @media(max-width:920px){
+    .ClgbixBox{
+      left: 0rem !important;
+      margin-left: 0%;
+    }
+  }
+  @media(max-width:768px){
+      html{
+        font-size: 70%;
+      }
+      .ClgbixBox{
+        position: relative;
+        left: 2rem;
+      }
+      
+    }
+    
+   @media only screen and (max-width: 550px) {
+      body {
+        background-color: white;
+     
+      }
+     .ClgbixBox,.ClgbigC,.ClgquarterC,.ClgsmallC1,.ClgsmallC2{
+        display: none;
+      }
+  
+    
+    }

@@ -1,5 +1,6 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import LoginReg from "./pages/auth/LoginReg";
+import PartnerLogin from "./pages/partner/auth/auth";
 import ResetPassword from "./pages/auth/ResetPassword";
 import SendPasswordResetEmail from "./pages/auth/SendPasswordResetEmail";
 import InvestorMain from "./pages/Investor";
@@ -26,6 +27,12 @@ import IPortfolio from "./components/pages/Ent-Investor-Portfolio";
 import BHome from "./components/pages/Ent-Buddy-Home";
 import BProfile from "./components/pages/Ent-Buddy-Profile";
 import FSuccess from "./components/pages/Ent-Final-Success.jsx";
+import Selection from "./components/pages/SingleView-Selection";
+import Landing from "./pages";
+import AccountType from "./pages/started";
+import College from "./pages/partner/audience/SingleView-CollegeStudent";
+import Employee from "./pages/partner/audience/SingleView-Employee";
+import Student from "./pages/partner/audience/SingleView-SchoolStudent";
 
 function App() {
   // const { access_token } = useSelector(state => state.auth)
@@ -34,72 +41,94 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Landing />} exact />
+          <Route path="/start" element={<AccountType />} exact />
+          <Route path="/app" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="investor-main" element={<InvestorMain />} />
-            <Route path="single-user" element={<SingleUser />} />
+            <Route path="/app/single/selection" element={<Selection />} />
+            <Route path="/app/investor-main" element={<InvestorMain />} />
+            <Route path="/app/single-user" element={<SingleUser />} />
             {/* <Route path="login" element={!access_token ? <LoginReg /> : <Navigate to="/entrepreneur/welcome-page" />} /> */}
-            <Route path="login" element={<LoginReg />} />
+            <Route path="/app/entreprenaur/login" element={<LoginReg />} />
+            <Route path="/app/partner/login" element={<PartnerLogin />} />
+            <Route path="/app/partner/dashboard" element={<Welcome />} />
+            <Route path="/app/partner/selection/school" element={<Student />} />
             <Route
-              path="sendpasswordresetemail"
+              path="/app/partner/selection/college"
+              element={<College />}
+            />
+            <Route
+              path="/app/partner/selection/employee"
+              element={<Employee />}
+            />
+            <Route
+              path="/app/sendpasswordresetemail"
               element={<SendPasswordResetEmail />}
             />
             <Route
-              path="api/user/reset/:id/:token"
+              path="/app/api/user/reset/:id/:token"
               element={<ResetPassword />}
             />
           </Route>
           {/* <Route path="/entrepreneur/welcome-page" element={access_token ? <Welcome /> : <Navigate to="/login" />} /> */}
-          <Route path="/entrepreneur/welcome-page" element={<Welcome />} />
-          <Route path="/entrepreneur/partners" element={<Buddy />} exact />
+          <Route path="/app/entrepreneur/welcome-page" element={<Welcome />} />
+          <Route path="/app/entrepreneur/partners" element={<Buddy />} exact />
           <Route
-            path="/entrepreneur/partners/verification"
+            path="/app/entrepreneur/partners/verification"
             element={<BVerify />}
             exact
           />
           <Route
-            path="/entrepreneur/partners/success"
+            path="/app/entrepreneur/partners/success"
             element={<BSuccess />}
             exact
           />
-          <Route path="/entrepreneur/portfolio" element={<Investor />} exact />
+          <Route
+            path="/app/entrepreneur/portfolio"
+            element={<Investor />}
+            exact
+          />
 
           <Route
-            path="/enterpreneur/portfolio/success"
+            path="/app/enterpreneur/portfolio/success"
             element={<ISuccess />}
             exact
           />
           <Route
-            path="/enterpreneur/portfolio/overview"
+            path="/app/enterpreneur/portfolio/overview"
             element={<IOverView />}
             exact
           />
           <Route
-            path="/entrepreneur/partners/setting"
+            path="/app/entrepreneur/partners/setting"
             element={<BSetting />}
             exact
           />
           <Route
-            path="/buddy-account-type-change"
+            path="/app/buddy-account-type-change"
             element={<BChange />}
             exact
           />
 
           <Route
-            path="/enterpreneur/portfolio/details"
+            path="/app/enterpreneur/portfolio/details"
             element={<IPortfolio />}
             exact
           />
-          <Route path="/entrepreneur/release" element={<Release />} exact />
-          <Route path="/entrepreneur/partners/home" element={<BHome />} exact />
+          <Route path="/app/entrepreneur/release" element={<Release />} exact />
           <Route
-            path="/entrepreneur/partners/profile"
+            path="/app/entrepreneur/partners/home"
+            element={<BHome />}
+            exact
+          />
+          <Route
+            path="/app/entrepreneur/partners/profile"
             element={<BProfile />}
             exact
           />
 
           <Route
-            path="/enterpreneur/final-success"
+            path="/app/enterpreneur/final-success"
             element={<FSuccess />}
             exact
           />
