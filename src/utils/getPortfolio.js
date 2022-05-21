@@ -2,7 +2,7 @@ import axios from "axios";
 
 const getPortfolio = async () => {
   try {
-    const r = await axios.get("http://127.0.0.1:8000/api/portfolio/", {
+    const r = await axios.get("https://10doshi12.pythonanywhere.com/api/portfolio/", {
       headers: {
         Authorization: "Token " + localStorage.getItem("access_token"),
       },
