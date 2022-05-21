@@ -74,7 +74,7 @@ const Investor = () => {
     console.log("response of post request is ", res);
     axios({
       method: "get",
-      url: `http://127.0.0.1:8000/api/portfolio/`,
+      url: `https://10doshi12.pythonanywhere.com/api/portfolio/`,
       headers: {
         Authorization: `Token ${access_token}`,
       },
