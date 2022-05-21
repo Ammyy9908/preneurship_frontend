@@ -19,7 +19,7 @@ const BHome = () => {
   function getdata() {
     axios({
       method: "get",
-      url: "http://127.0.0.1:8000/api/verification/",
+      url: "https://10doshi12.pythonanywhere.com/api/verification/",
       headers: {
         Authorization: `Token ${access_token}`,
       },
