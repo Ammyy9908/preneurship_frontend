@@ -170,7 +170,7 @@ const BProfile = () => {
 
       </div> */}
         <Link
-          to="/entrepreneur/partners/home"
+          to="/app/entrepreneur/partners/home"
           className="E-13-btn1"
           type="submit"
         >
@@ -178,7 +178,7 @@ const BProfile = () => {
           Update
         </Link>
         <Link
-          to="/entrepreneur/partners/home"
+          to="/app/entrepreneur/partners/home"
           className="E-13-btn2"
           type="submit"
         >

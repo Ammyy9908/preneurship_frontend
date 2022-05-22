@@ -456,7 +456,7 @@ const Investor = () => {
         {/* <input type="text" name="pitch" onChange={handleChange} id=""/> <br/> */}
         <Link
           className="E-5-btn1"
-          to="/enterpreneur/portfolio/overview"
+          to="/app/enterpreneur/portfolio/overview"
           onClick={submit}
           type="submit"
           disabled={!EntrepreneurPortfolioData.photoReady}

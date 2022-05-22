@@ -60,9 +60,9 @@ const UserLogin = () => {
     }).then((response) => {
       // console.log(response)
       if (response.data[0]) {
-        navigate("/entrepreneur/partners/home");
+        navigate("/app/entrepreneur/partners/home");
       } else {
-        navigate("/entrepreneur/welcome-page");
+        navigate("/app/entrepreneur/welcome-page");
       }
     });
 

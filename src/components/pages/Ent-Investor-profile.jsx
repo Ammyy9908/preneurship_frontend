@@ -53,7 +53,7 @@ const IProfile = () => {
           Update
         </Link>
         <Link
-          to="./investor-account-type-change"
+          to="/app/investor/account-type-change"
           className="E-15-btn2"
           type="submit"
         >
@@ -62,7 +62,7 @@ const IProfile = () => {
         </Link>{" "}
         <br></br>
         <br></br>
-        <Link to="./investor-home" className="E-15-btn3" type="submit">
+        <Link to="/app/investor" className="E-15-btn3" type="submit">
           &#60; Back
         </Link>
         {/* <Link to="./investor-account-type-change"  className="E-15-btn3" type="submit"> Change Account Type</Link> */}

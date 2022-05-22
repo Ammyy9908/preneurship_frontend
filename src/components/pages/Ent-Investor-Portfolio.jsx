@@ -169,7 +169,7 @@ const IPortfolio = () => {
         className="E-E12-btn2"
         onClick={submit}
         type="submit"
-        to="/enterpreneur/portfolio/success"
+        to="/app/enterpreneur/portfolio/success"
       >
         {" "}
         Save

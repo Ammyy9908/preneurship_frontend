@@ -70,13 +70,13 @@ const BHome = () => {
   return (
     <>
       <div className="E-12-navbar2">
-        <Link to="/entrepreneur/partners/home">
+        <Link to="/app/entrepreneur/partners/home">
           <img src={h} className="E-12-s" alt="" />
         </Link>
-        <Link to="/entrepreneur/partners/profile">
+        <Link to="/app/entrepreneur/partners/profile">
           <img src={c} className="E-12-t" alt="" />
         </Link>
-        <Link to="/entrepreneur/partners/setting">
+        <Link to="/app/entrepreneur/partners/setting">
           {" "}
           <img src={s} className="E-12-u" alt="" />
         </Link>
@@ -90,7 +90,7 @@ const BHome = () => {
             {/* <p>Ozone pvt. ltd</p> */}
             <p>{state.companyname}</p>
             <Link
-              to="/login"
+              to="/app/entreprenaur/login"
               onClick={handleLogOut}
               className="E-12-notification "
             >
@@ -123,12 +123,20 @@ const BHome = () => {
         {/* <Link to="/buddy-profile" className="E-12-btn1"  type="submit">Update Profile</Link> */}
         <br />
         <br />
-        <Link to="/entrepreneur/portfolio" className="E-12-btn2" type="submit">
+        <Link
+          to="/app/entrepreneur/portfolio"
+          className="E-12-btn2"
+          type="submit"
+        >
           SetUp/Update Portfolio
         </Link>
         <br />
         <br />
-        <Link to="/entrepreneur/release" className="E-12-btn2" type="submit">
+        <Link
+          to="/app/entrepreneur/release"
+          className="E-12-btn2"
+          type="submit"
+        >
           Next Step is Ready to Release Equity
         </Link>
       </div>

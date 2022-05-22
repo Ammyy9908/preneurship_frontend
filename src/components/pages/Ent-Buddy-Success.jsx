@@ -13,7 +13,7 @@ const BSuccess = () => {
         </div>
         <Link
           className="E-4-btn1"
-          to="/entrepreneur/partners/home"
+          to="/app/entrepreneur/partners/home"
           type="submit"
         >
           Next &#62;

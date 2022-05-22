@@ -30,7 +30,7 @@ const BSetting = () => {
             <br />
             <input type="text" name="" id="" placeholder="Payments" /> <br />
             <Link
-              to="/entrepreneur/partners/home"
+              to="/app/entrepreneur/partners/home"
               className="E-10-btn"
               type="submit"
             >

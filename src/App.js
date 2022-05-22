@@ -33,6 +33,7 @@ import AccountType from "./pages/started";
 import College from "./pages/partner/audience/SingleView-CollegeStudent";
 import Employee from "./pages/partner/audience/SingleView-Employee";
 import Student from "./pages/partner/audience/SingleView-SchoolStudent";
+import PartnerDashboard from "./pages/partner/dashboard/SingleView-DashBoard";
 
 function App() {
   // const { access_token } = useSelector(state => state.auth)
@@ -51,7 +52,10 @@ function App() {
             {/* <Route path="login" element={!access_token ? <LoginReg /> : <Navigate to="/entrepreneur/welcome-page" />} /> */}
             <Route path="/app/entreprenaur/login" element={<LoginReg />} />
             <Route path="/app/partner/login" element={<PartnerLogin />} />
-            <Route path="/app/partner/dashboard" element={<Welcome />} />
+            <Route
+              path="/app/partner/dashboard"
+              element={<PartnerDashboard />}
+            />
             <Route path="/app/partner/selection/school" element={<Student />} />
             <Route
               path="/app/partner/selection/college"

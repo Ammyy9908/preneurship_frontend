@@ -75,7 +75,7 @@ const Release = () => {
             <br /> <br /> <br /> <br /> <br /> <br />
             {/* <p>Looking for a buddy?</p> */}
             <Link
-              to="/enterpreneur/final-success"
+              to="/app/enterpreneur/final-success"
               onClick={submit}
               className="E-R-btn1"
               type="submit"
@@ -83,7 +83,7 @@ const Release = () => {
               YES
             </Link>
             <Link
-              to="/entrepreneur/partners/home"
+              to="/app/entrepreneur/partners/home"
               className="E-R-btn1"
               type="submit"
             >

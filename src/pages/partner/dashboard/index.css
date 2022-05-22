@@ -152,11 +152,7 @@
     left: -2rem;
     width: 150px;
     height: 150px;
-   background-image: url('https://t4.ftcdn.net/jpg/03/03/54/59/360_F_303545914_XLEAix36kSd78qCl4XYhl2S1iYSA9IyW.jpg');
-   background-size: 100% 100%;
-      border-radius: 50%;
-      border: 1px solid rgb(179, 179, 179);
-    }
+  }
   .mob_skill{
     position: relative;
     top: 10rem;
@@ -222,6 +218,34 @@
     box-shadow: 2px 3px rgb(245, 243, 243);
     border-radius: 5px;
   }
+
+  .user_photo_input{
+    width:55px;
+    height:55px;
+    background-color: rgb(83, 75, 75);
+    display:block;
+    background-size: cover;
+    margin-top: 45px;
+    cursor: pointer;
+  }
+  .user_photo_input input[type="file"]{
+    display: none;
+  }
+
+         
+  .confirm_btn{
+    width:230px;
+    height:42px;
+    margin-top: 32px;
+    border: 0;
+    background-color: #4525f2;
+    color: #fff;
+  }
+  .disabled{
+    pointer-events: none;
+    background-color: #4425f226 !important;
+  }
+ 
   /* .mobile_info.mobile_profile{
     width: 50px;
     height: 50px;

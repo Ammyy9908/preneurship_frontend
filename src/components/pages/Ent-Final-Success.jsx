@@ -13,7 +13,7 @@ const FSuccess = () => {
         </div>
         <Link
           className="E-F-btn1"
-          to="/entrepreneur/partners/home"
+          to="/app/entrepreneur/partners/home"
           type="submit"
         >
           Next &#62;

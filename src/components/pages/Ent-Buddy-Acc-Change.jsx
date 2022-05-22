@@ -15,7 +15,7 @@ const BChange = () => {
             <Link className="E-7-btn1" to="./investor" type="submit">
               YES
             </Link>
-            <Link to="/buddy-profile" className="E-7-btn1" type="submit">
+            <Link to="/app/buddy-profile" className="E-7-btn1" type="submit">
               NO
             </Link>
           </div>

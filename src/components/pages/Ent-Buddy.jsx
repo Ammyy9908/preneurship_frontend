@@ -141,7 +141,7 @@ const Buddy = () => {
           className="E-2-btn1"
           type="submit"
           onClick={submit}
-          to="/entrepreneur/partners/verification"
+          to="/app/entrepreneur/partners/verification"
         >
           Next &#62;
         </Link>

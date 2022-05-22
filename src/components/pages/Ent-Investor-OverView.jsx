@@ -133,7 +133,7 @@ const IOverView = () => {
           className="E-11-btn1"
           onClick={submit}
           type="submit"
-          to="/enterpreneur/portfolio/details"
+          to="/app/enterpreneur/portfolio/details"
         >
           {" "}
           Next &#62;

@@ -91,6 +91,15 @@
     border-radius: 50%;
   
   }
+
+  .submit_btn{
+    background-color: #2505da;
+  }
+
+  .disabled{
+    cursor: 'not-allowed' !important;
+    background-color: #4425f280;
+  }
   .StMobile{
     text-align: center;
   }

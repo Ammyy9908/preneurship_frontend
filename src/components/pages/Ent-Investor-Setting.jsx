@@ -31,7 +31,7 @@ const ISetting = () => {
             />{" "}
             <br />
             <input type="text" name="" id="" placeholder="Payments" /> <br />
-            <Link to="./investor-home" className="E-I-btn" type="submit">
+            <Link to="/app/investor" className="E-I-btn" type="submit">
               Update &#62;
             </Link>
           </div>

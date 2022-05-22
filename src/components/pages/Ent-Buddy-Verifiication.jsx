@@ -130,7 +130,7 @@ const BVerify = () => {
               onChange={(e) => handleFilesubmit(e, setSelfie)}
             />
             <Link
-              to="/entrepreneur/partners/success"
+              to="/app/entrepreneur/partners/success"
               className="btn1"
               type="submit"
               onClick={submit}

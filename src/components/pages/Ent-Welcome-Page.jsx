@@ -129,7 +129,7 @@ const Welcome = () => {
             className="E-1-btn1"
             type="submit"
             onClick={submit}
-            to="/entrepreneur/partners"
+            to="/app/entrepreneur/partners"
           >
             Next
           </Link>

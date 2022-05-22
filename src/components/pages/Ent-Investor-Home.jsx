@@ -9,15 +9,15 @@ const IHome = () => {
   return (
     <>
       <div className="E-14-navbar2">
-        <Link to="/investor-home">
+        <Link to="/app/investor">
           {" "}
           <img src={h} className="E-14-s" alt="" />
         </Link>
-        <Link to="/investor-profile">
+        <Link to="/app/investor/profile">
           {" "}
           <img src={c} className="E-11-t" alt="" />
         </Link>
-        <Link to="/investor-portfolio">
+        <Link to="/app/investor/portfolio">
           {" "}
           <img src={s} className="E-11-u" alt="" />
         </Link>
@@ -28,7 +28,7 @@ const IHome = () => {
           <span>
             <h5>John dept</h5>
             <p>Ozone pvt. ltd</p>
-            <Link to="./investor-messages" className="E-14-notification ">
+            <Link to="/app/investor/messages" className="E-14-notification ">
               {" "}
               <span>Inbox</span>
               <span className="E-14-badge">+</span>
