@@ -59,10 +59,11 @@ const UserLogin = () => {
       },
     }).then((response) => {
       // console.log(response)
+
       if (response.data[0]) {
-        navigate("/app/single/dashbord");
-      } else {
         navigate("/app/single/selection");
+      } else {
+        navigate("/app/partner/dashboard");
       }
     });
 
