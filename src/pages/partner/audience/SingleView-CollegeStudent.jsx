@@ -1,14 +1,28 @@
 import React from "react";
 import "./college.css";
 import { Link } from "react-router-dom";
+import saveCollege from "../../../utils/saveCollege";
 function College() {
   const [course, setCourse] = React.useState("");
   const [specification, setSpecification] = React.useState("");
   const [institute, setInstitute] = React.useState("");
   const [prior_edu, setPriorEdu] = React.useState("");
 
-  const handleSubmission = () => {
+  const handleCollegeSubmission = () => {
     console.log("Submitting form");
+    if (course && specification && institute && prior_edu) {
+      saveCollege(
+        course,
+        specification,
+        institute,
+        prior_edu
+      ).then((res) => {
+        console.log(res);
+        if (res) {
+          window.location.href = "/app/partner/dashboard";
+        }
+      });
+    }
   };
 
   const back = () => {
@@ -91,7 +105,7 @@ function College() {
                   cursor: "pointer",
                 }}
                 disbaled={!course || !specification || !institute || !prior_edu}
-                onClick={handleSubmission}
+                onClick={handleCollegeSubmission}
               >
                 Proceed
               </button>

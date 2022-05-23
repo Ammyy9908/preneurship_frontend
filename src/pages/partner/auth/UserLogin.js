@@ -61,9 +61,9 @@ const UserLogin = () => {
       // console.log(response)
 
       if (response.data[0]) {
-        navigate("/app/single/selection");
+        navigate("/app/single/profile/home");
       } else {
-        navigate("/app/partner/dashboard");
+        navigate("/app/single/selection");
       }
     });
 
