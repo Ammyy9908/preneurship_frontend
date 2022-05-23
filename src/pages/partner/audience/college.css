@@ -140,6 +140,24 @@
     margin-top: 4%;
     margin-bottom: 4%;
   }
+
+  .form__control{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:12px;
+  }
+  .form__control label{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: .3rem;
+  }
+  .form__control input{
+    width: 80%;
+    padding: 10px;
+    border: 1px solid rgb(137, 135, 135);
+    
+  }
   #ClgStMobNext{
     padding: 13px 23px;
     color: white;

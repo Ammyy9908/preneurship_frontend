@@ -24,55 +24,12 @@ function SchoolStudent() {
     }
   };
 
+  const back = () => {
+    window.location.href = "/app/single/selection";
+  };
+
   return (
     <>
-      {/* MOBILE VIEW  */}
-
-      <div className="StMobile">
-        <h2 className="StMobHead">You are almost there!</h2>
-
-        <div className="MobForm">
-          <select
-            name="qualification"
-            defaultValue={current_qualification}
-            onChange={(e) => {
-              setCurrentQualification(e.target.value);
-            }}
-          >
-            <option value="null">📕 Current Qualification</option>
-            <option value="SSLC">SSLC</option>
-            <option value="PUC">PUC</option>
-          </select>
-          <select
-            name="current-status"
-            defaultValue={qualification_status}
-            onChange={(e) => {
-              setQualificationStatus(e.target.value);
-            }}
-          >
-            <option value="null">📖Qualification Status </option>
-            <option value="purs">Persuing</option>
-            <option value="completed">Completed</option>
-          </select>
-          <select
-            name="institution-name"
-            defaultValue={InstituteName}
-            onChange={(e) => {
-              setInstituteName(e.target.value);
-            }}
-          >
-            <option value="null">🎓Academy</option>
-            <option value="institution">KVS,Karnal</option>
-            <option value="institution">MVIT Bangalore</option>
-            <option value="institution">Reva School</option>
-          </select>
-        </div>
-        <Link to="/app/single-view-DashBoard" id="StMobNext">
-          Next &#62;
-        </Link>
-        <button className="submit_btn">Proceed</button>
-      </div>
-
       {/* DESKTOP VIEW  */}
 
       <div className="quarterC"></div>
@@ -166,6 +123,7 @@ function SchoolStudent() {
                   color: "#fff",
                   cursor: "pointer",
                 }}
+                onClick={back}
               >
                 Back
               </button>
