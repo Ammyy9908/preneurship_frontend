@@ -54,7 +54,7 @@ const Registration = () => {
         // storeToken(res.data.token)
         localStorage.setItem("access_token", res.data.token);
         localStorage.setItem("id", res.data.user.id);
-        navigate("/entrepreneur/welcome-page");
+        navigate("/app/single/selection");
       }
     }
   };
