@@ -61,7 +61,7 @@ const UserLogin = () => {
       // console.log(response)
 
       if (response.data[0]) {
-        navigate("/app/single/profile/home");
+        navigate("/app/single/explore");
       } else {
         navigate("/app/single/selection");
       }

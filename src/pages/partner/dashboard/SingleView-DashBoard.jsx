@@ -37,7 +37,7 @@ function DashBoard() {
         .then((res) => {
           console.log(res);
           if (res) {
-            window.location.href = "/app/partner/profile/home";
+            window.location.href = "/app/single/explore";
           }
         })
         .catch((e) => console.log(e));

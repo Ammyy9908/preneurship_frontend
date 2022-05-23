@@ -34,7 +34,7 @@ import College from "./pages/partner/audience/SingleView-CollegeStudent";
 import Employee from "./pages/partner/audience/SingleView-Employee";
 import Student from "./pages/partner/audience/SingleView-SchoolStudent";
 import PartnerDashboard from "./pages/partner/dashboard/SingleView-DashBoard";
-
+import Explore from "./pages/partner/Explore/Explore";
 function App() {
   // const { access_token } = useSelector(state => state.auth)
   const access_token = localStorage.getItem("access_token");
@@ -49,6 +49,7 @@ function App() {
             <Route path="/app/single/selection" element={<Selection />} />
             <Route path="/app/investor-main" element={<InvestorMain />} />
             <Route path="/app/single-user" element={<SingleUser />} />
+            <Route path="/app/single/explore" element={<Explore />} />
             {/* <Route path="login" element={!access_token ? <LoginReg /> : <Navigate to="/entrepreneur/welcome-page" />} /> */}
             <Route path="/app/entreprenaur/login" element={<LoginReg />} />
             <Route path="/app/partner/login" element={<PartnerLogin />} />
