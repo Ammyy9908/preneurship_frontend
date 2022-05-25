@@ -1,5 +1,5 @@
 import React from "react";
-import "./college.css";
+import "./audience.css";
 import { Link } from "react-router-dom";
 import saveCollege from "../../../utils/saveCollege";
 function College() {
@@ -11,12 +11,7 @@ function College() {
   const handleCollegeSubmission = () => {
     console.log("Submitting form");
     if (course && specification && institute && prior_edu) {
-      saveCollege(
-        course,
-        specification,
-        institute,
-        prior_edu
-      ).then((res) => {
+      saveCollege(course, specification, institute, prior_edu).then((res) => {
         console.log(res);
         if (res) {
           window.location.href = "/app/partner/dashboard";
@@ -30,44 +25,45 @@ function College() {
   };
   return (
     <>
-      {/* <div className="ClgquarterC"></div>
-      <div className="ClgsmallC1"></div>
-      <div className="ClgsmallC2"></div> */}
-
-      <div className="ClgbixBox">
-        <div className="ClgSchoolStudentFrom">
-          <h3>Almost there ✅</h3>
-          <div className="ClgStFrom">
-            <select
-              name="course"
-              onChange={(e) => {
-                setCourse(e.target.value);
-              }}
-            >
-              <option value="null">📕 Course</option>
-              <option value="be">B.E</option>
-              <option value="bca">BCA</option>
-            </select>
-            <select
-              name="spec"
-              onChange={(e) => {
-                setSpecification(e.target.value);
-              }}
-            >
-              <option value="null">Specification </option>
-              <option value="ise">Information Science</option>
-              <option value="cse">Computer Science</option>
-            </select>
-            <select
-              name="college"
-              onChange={(e) => {
-                setInstitute(e.target.value);
-              }}
-            >
-              <option value="null">College</option>
-              <option value="sirmvit">Sir MVIT</option>
-              <option value="reva">Reva University</option>
-            </select>
+      <div className="college-page">
+        <div className="college-page-container">
+          <div className="college-form">
+            <div className="form__control">
+              <label htmlFor="course">Course</label>
+              <input
+                type="text"
+                name="course"
+                id="course"
+                value={course}
+                onChange={(e) => {
+                  setCourse(e.target.value);
+                }}
+              />
+            </div>
+            <div className="form__control">
+              <label htmlFor="specification">Specification</label>
+              <input
+                type="text"
+                name="specification"
+                id="specification"
+                value={specification}
+                onChange={(e) => {
+                  setSpecification(e.target.value);
+                }}
+              />
+            </div>
+            <div className="form__control">
+              <label htmlFor="institute">Institute</label>
+              <input
+                type="text"
+                name="institute"
+                id="institute"
+                value={institute}
+                onChange={(e) => {
+                  setInstitute(e.target.value);
+                }}
+              />
+            </div>
             <div className="form__control">
               <label htmlFor="prior_edu">Prior Education</label>
               <input
@@ -80,57 +76,27 @@ function College() {
                 }}
               />
             </div>
-            <div
-              className="form__submitter"
-              style={{
-                width: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: 20,
-                flexDirection: "column",
-              }}
-            >
+            <div className="form__submitter">
               <button
-                className={`submit_btn ${
+                className={`proceed_btn ${
                   !course || !specification || !institute || !prior_edu
                     ? "disabled"
                     : ""
                 }`}
-                style={{
-                  width: "100%",
-                  height: 32,
-                  border: 0,
-                  color: "#fff",
-                  cursor: "pointer",
-                }}
-                disbaled={!course || !specification || !institute || !prior_edu}
+                disabled={
+                  !course || !specification || !institute || !prior_edu
+                    ? true
+                    : false
+                }
                 onClick={handleCollegeSubmission}
               >
                 Proceed
               </button>
-
-              <button
-                className="back_btn"
-                style={{
-                  width: "100%",
-                  height: 32,
-                  border: 0,
-                  backgroundColor: "#000",
-                  color: "#fff",
-                  cursor: "pointer",
-                }}
-                onClick={back}
-              >
-                Back
-              </button>
+              <button className="back_btn">Back</button>
             </div>
           </div>
         </div>
-        <div className="ClgStudentPoster"></div>
       </div>
-
-      <div className="ClgbigC"></div>
     </>
   );
 }

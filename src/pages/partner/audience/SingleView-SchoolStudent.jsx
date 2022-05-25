@@ -1,5 +1,5 @@
 import React from "react";
-import "./school.css";
+import "./audience.css";
 import { Link } from "react-router-dom";
 import saveSchool from "../../../utils/saveSchool";
 function SchoolStudent() {
@@ -30,109 +30,71 @@ function SchoolStudent() {
 
   return (
     <>
-      {/* DESKTOP VIEW  */}
+      <div className="college-page">
+        <div className="college-page-container">
+          <div className="college-form">
+            <div className="form__control">
+              <label htmlFor="course">Course</label>
+              <input
+                type="text"
+                name="course"
+                id="course"
+                value={current_qualification}
+                onChange={(e) => {
+                  setCurrentQualification(e.target.value);
+                }}
+              />
+            </div>
+            <div className="form__control">
+              <label htmlFor="specification">Specification</label>
+              <input
+                type="text"
+                name="specification"
+                id="specification"
+                value={qualification_status}
+                onChange={(e) => {
+                  setQualificationStatus(e.target.value);
+                }}
+              />
+            </div>
+            <div className="form__control">
+              <label htmlFor="institute">Institute</label>
+              <input
+                type="text"
+                name="institute"
+                id="institute"
+                value={InstituteName}
+                onChange={(e) => {
+                  setInstituteName(e.target.value);
+                }}
+              />
+            </div>
 
-      <div className="quarterC"></div>
-      <div className="smallC1"></div>
-      <div className="smallC2"></div>
-
-      <div className="bixBox">
-        <div className="SchoolStudentFrom">
-          <h3>Almost Done! ✅</h3>
-          <div className="StFrom">
-            <select
-              name="qualification"
-              defaultValue={current_qualification}
-              onChange={(e) => {
-                setCurrentQualification(e.target.value);
-              }}
-            >
-              <option value="null">📕 Current Qualification</option>
-              <option value="SSLC">SSLC</option>
-              <option value="PUC">PUC</option>
-            </select>
-            <select
-              name="current-status"
-              defaultValue={qualification_status}
-              onChange={(e) => {
-                setQualificationStatus(e.target.value);
-              }}
-            >
-              <option value="null">📖Qualification Status </option>
-              <option value="purs">Persuing</option>
-              <option value="completed">Completed</option>
-            </select>
-            <select
-              name="institution-name"
-              defaultValue={InstituteName}
-              onChange={(e) => {
-                setInstituteName(e.target.value);
-              }}
-            >
-              <option value="null">🎓Academy</option>
-              <option value="institution">KVS,Karnal</option>
-              <option value="institution">MVIT Bangalore</option>
-              <option value="institution">Reva School</option>
-            </select>
-            {/* <Link to="/app/partner/single-view-DashBoard" id="Stnext">
-              Next&#62;
-            </Link> */}
-            <div
-              className="form__submitter"
-              style={{
-                width: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: 20,
-                flexDirection: "column",
-              }}
-            >
+            <div className="form__submitter">
               <button
-                className={`submit_btn ${
+                className={`proceed_btn ${
                   !current_qualification ||
-                  !qualification_status ||
-                  !InstituteName
+                  !InstituteName ||
+                  !qualification_status
                     ? "disabled"
                     : ""
                 }`}
-                style={{
-                  width: "100%",
-                  height: 32,
-                  border: 0,
-                  color: "#fff",
-                  cursor: "pointer",
-                }}
-                disbaled={
+                disabled={
                   !current_qualification ||
-                  !qualification_status ||
-                  !InstituteName
+                  !InstituteName ||
+                  !qualification_status
+                    ? true
+                    : false
                 }
                 onClick={handleSubmission}
               >
                 Proceed
               </button>
-
-              <button
-                className="back_btn"
-                style={{
-                  width: "100%",
-                  height: 32,
-                  border: 0,
-                  backgroundColor: "#000",
-                  color: "#fff",
-                  cursor: "pointer",
-                }}
-                onClick={back}
-              >
-                Back
-              </button>
+              <button className="back_btn">Back</button>
             </div>
           </div>
         </div>
-        <div className="StudentPoster"></div>
       </div>
-      <div className="bigC"></div>
     </>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import "./employee.css";
+import "./audience.css";
 import { Link } from "react-router-dom";
 function Employee() {
   const [company, setCompany] = React.useState("");
@@ -15,87 +15,61 @@ function Employee() {
   };
   return (
     <>
-      <div className="EMpyClgbixBox">
-        <div className="EMpyClgSchoolStudentFrom">
-          <h3>Almost there ✅</h3>
-          <div className="EMpyClgStFrom">
-            <select
-              name="company"
-              onChange={(e) => {
-                setCompany(e.target.value);
-              }}
-            >
-              <option value="">Company Name </option>
-              <option value="purs">Persuing</option>
-            </select>
-            <select
-              name="position"
-              onChange={(e) => {
-                setDesignation(e.target.value);
-              }}
-            >
-              <option value="">Position</option>
-              <option value="Frontend_Dev">Frontend Developer</option>
-              <option value="FullStack">Full Stack Developer</option>
-            </select>
-            <select
-              name="prior_edu"
-              onChange={(e) => {
-                setPriorEdu(e.target.value);
-              }}
-            >
-              <option value="">Add prior education</option>
-              <option value="Bachelor Engineering">B.E</option>
-              <option value="ms">MS</option>
-            </select>
-            <div
-              className="form__submitter"
-              style={{
-                width: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: 20,
-                flexDirection: "column",
-              }}
-            >
+      <div className="college-page">
+        <div className="college-page-container">
+          <div className="college-form">
+            <div className="form__control">
+              <label htmlFor="course">Course</label>
+              <input
+                type="text"
+                name="course"
+                id="course"
+                value={company}
+                onChange={(e) => {
+                  setCompany(e.target.value);
+                }}
+              />
+            </div>
+            <div className="form__control">
+              <label htmlFor="specification">Specification</label>
+              <input
+                type="text"
+                name="specification"
+                id="specification"
+                value={designation}
+                onChange={(e) => {
+                  setDesignation(e.target.value);
+                }}
+              />
+            </div>
+            <div className="form__control">
+              <label htmlFor="institute">Institute</label>
+              <input
+                type="text"
+                name="institute"
+                id="institute"
+                value={prior_edu}
+                onChange={(e) => {
+                  setPriorEdu(e.target.value);
+                }}
+              />
+            </div>
+
+            <div className="form__submitter">
               <button
-                className={`submit_btn ${
+                className={`proceed_btn ${
                   !company || !designation || !prior_edu ? "disabled" : ""
                 }`}
-                style={{
-                  width: "100%",
-                  height: 32,
-                  border: 0,
-                  color: "#fff",
-                  cursor: "pointer",
-                }}
-                disbaled={!company || !designation || !prior_edu}
+                disabled={!company || !designation || !prior_edu ? true : false}
                 onClick={handleSubmission}
               >
                 Proceed
               </button>
-
-              <button
-                className="back_btn"
-                style={{
-                  width: "100%",
-                  height: 32,
-                  border: 0,
-                  backgroundColor: "#000",
-                  color: "#fff",
-                  cursor: "pointer",
-                }}
-                onClick={back}
-              >
-                Back
-              </button>
+              <button className="back_btn">Back</button>
             </div>
           </div>
         </div>
-        <div className="EMpyClgStudentPoster"></div>
       </div>
-      <div className="EMpyClgbigC"></div>
     </>
   );
 }
